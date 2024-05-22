@@ -37,7 +37,7 @@ const pathToTypes = (path) => {
 const SwapInput = ({ token, tokens, onChange, amount, setAmount, disabled, readOnly }) => {
   return (
     <fieldset className="SwapInput" disabled={disabled}>
-      <input type="text" id={token + "_amount"} placeholder="0.0" value={amount} onChange={(ev) => setAmount(ev.target.value)} readOnly={readOnly} />
+      <input type="text" id={token + "_amount"}  value={amount} onChange={(ev) => setAmount(ev.target.value)} readOnly={readOnly} />
       <select name="token" value={token} onChange={onChange}>
         {tokens.map(t => <option key={`${token}_${t.symbol}`}>{t.symbol}</option>)}
       </select>
@@ -176,6 +176,7 @@ const SwapForm = ({ setPairs }) => {
         }
       })
       .then(() => {
+        console.log(params)
         return manager.swap(params).then(tx => tx.wait())
       })
       .then(() => {
