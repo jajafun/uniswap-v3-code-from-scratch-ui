@@ -1,8 +1,8 @@
 const config = {
-  wethAddress: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
-  factoryAddress: '0x5FC8d32690cc91D4c39d9d3abcBD16989F875707',
-  managerAddress: '0x0165878A594ca255338adfa4d48449f69242Eb8F',
-  quoterAddress: '0xa513E6E4b8f2a923D98304ec87F64353C4D5C853',
+  wethAddress: '0x3241d55FC2D96dfa6cC21A1ADF0FDc7eAE844Dd5',
+  factoryAddress: '0x86aBa1bB87BaAf1207e783e9eeA40433F1441130',
+  managerAddress: '0x13251e89E486f69d22D262F7aE61Fb6b1350B824',
+  quoterAddress: '0x0Ca50EFEbf50DCC2d08a1C6D41CC8c7C2c8B837A',
   ABIs: {
     'ERC20': require('./abi/ERC20.json'),
     'Factory': require('./abi/Factory.json'),
@@ -14,9 +14,9 @@ const config = {
 
 config.tokens = {};
 config.tokens[config.wethAddress] = { symbol: 'WETH' };
-config.tokens['0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0'] = { symbol: 'UNI' };
-config.tokens['0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9'] = { symbol: 'WBTC' };
-config.tokens['0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9'] = { symbol: 'USDT' };
-config.tokens['0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512'] = { symbol: 'USDC' };
+config.tokens['0x96E125F6725E5D7f7681AC0558F3D6E81Bb4266e'] = { symbol: 'UNI' };
+config.tokens['0x70c0d499b8c57C7CD2B1BC808dB06dF916A5b6f8'] = { symbol: 'WBTC' };
+config.tokens['0xdB201B984143420209f4191E090cf95ceB5dab31'] = { symbol: 'USDT' };
+config.tokens['0x7F3FEE2B98D7349828673f47792634bB4B1bc537'] = { symbol: 'USDC' };
 
 export default config;

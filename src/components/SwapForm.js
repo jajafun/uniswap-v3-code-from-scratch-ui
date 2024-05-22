@@ -98,6 +98,7 @@ const SwapForm = ({ setPairs }) => {
     ));
 
     loadPairs().then((pairs) => {
+      console.log("pairs", pairs)
       const pair_ = pairs.filter((pair) => {
         return pair.token0.address === config.wethAddress || pair.token1.address === config.wethAddress;
       })[0];
@@ -116,7 +117,7 @@ const SwapForm = ({ setPairs }) => {
 
   /**
    * Load pairs from a Factory address by scanning for 'PoolCreated' events.
-   * 
+   *
    * @returns array of 'pair' objects.
    */
   const loadPairs = () => {
@@ -250,7 +251,7 @@ const SwapForm = ({ setPairs }) => {
 
   /**
    * Set currently selected pair based on selected tokens.
-   * 
+   *
    * @param {symbol} selected token symbol
    * @param {index} token index
    */
